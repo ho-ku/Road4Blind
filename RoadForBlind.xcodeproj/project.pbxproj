@@ -16,6 +16,9 @@
 		371692242562855800EB79C4 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371692232562855800EB79C4 /* TimerService.swift */; };
 		371692272562856D00EB79C4 /* R4BTimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371692262562856D00EB79C4 /* R4BTimerService.swift */; };
 		3716922B256286DD00EB79C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716922A256286DD00EB79C4 /* Constants.swift */; };
+		3716922F256292CB00EB79C4 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3716922E256292CB00EB79C4 /* Inceptionv3.mlmodel */; };
+		371692362562C67A00EB79C4 /* InceptionRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371692352562C67A00EB79C4 /* InceptionRecognizer.swift */; };
+		371692392562C6DE00EB79C4 /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371692382562C6DE00EB79C4 /* Recognizer.swift */; };
 		3717163C2562670700BC59C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717163B2562670700BC59C8 /* AppDelegate.swift */; };
 		3717163E2562670700BC59C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717163D2562670700BC59C8 /* SceneDelegate.swift */; };
 		371716432562670700BC59C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371716412562670700BC59C8 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 		371692232562855800EB79C4 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 		371692262562856D00EB79C4 /* R4BTimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R4BTimerService.swift; sourceTree = "<group>"; };
 		3716922A256286DD00EB79C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3716922E256292CB00EB79C4 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		371692352562C67A00EB79C4 /* InceptionRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InceptionRecognizer.swift; sourceTree = "<group>"; };
+		371692382562C6DE00EB79C4 /* Recognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognizer.swift; sourceTree = "<group>"; };
 		371716382562670700BC59C8 /* RoadForBlind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadForBlind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3717163B2562670700BC59C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3717163D2562670700BC59C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,7 @@
 		371692172562744700EB79C4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3716923B2562C6FD00EB79C4 /* ImageProcessor */,
 				371692222562854E00EB79C4 /* Timer */,
 				371692212562854100EB79C4 /* CameraPreview */,
 				3716921E2562827700EB79C4 /* DependencyInjection.swift */,
@@ -89,6 +96,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3716923B2562C6FD00EB79C4 /* ImageProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				371692382562C6DE00EB79C4 /* Recognizer.swift */,
+				371692352562C67A00EB79C4 /* InceptionRecognizer.swift */,
+			);
+			path = ImageProcessor;
+			sourceTree = "<group>";
+		};
 		3717162F2562670700BC59C8 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +133,7 @@
 				371692172562744700EB79C4 /* Services */,
 				37169229256286CD00EB79C4 /* Supporting Files */,
 				371716492562670A00BC59C8 /* Info.plist */,
+				3716922E256292CB00EB79C4 /* Inceptionv3.mlmodel */,
 			);
 			path = RoadForBlind;
 			sourceTree = "<group>";
@@ -242,12 +259,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3717163C2562670700BC59C8 /* AppDelegate.swift in Sources */,
+				3716922F256292CB00EB79C4 /* Inceptionv3.mlmodel in Sources */,
 				3716922B256286DD00EB79C4 /* Constants.swift in Sources */,
+				371692362562C67A00EB79C4 /* InceptionRecognizer.swift in Sources */,
 				37169212256270E500EB79C4 /* Color.swift in Sources */,
 				3717163E2562670700BC59C8 /* SceneDelegate.swift in Sources */,
 				371692242562855800EB79C4 /* TimerService.swift in Sources */,
 				3716920F25626FBD00EB79C4 /* CameraPreviewView.swift in Sources */,
 				37169215256271EF00EB79C4 /* CameraPreviewVC.swift in Sources */,
+				371692392562C6DE00EB79C4 /* Recognizer.swift in Sources */,
 				3716921C25627FE200EB79C4 /* PreviewServiceDelegate.swift in Sources */,
 				3716921F2562827700EB79C4 /* DependencyInjection.swift in Sources */,
 				371692272562856D00EB79C4 /* R4BTimerService.swift in Sources */,

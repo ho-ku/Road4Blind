@@ -20,4 +20,8 @@ final class DependencyInjection {
         return R4BTimerService()
     }
     
+    func recognizer() -> Recognizer {
+        return InceptionRecognizer()
+    }
+    
 }

@@ -15,6 +15,7 @@ final class CameraPreviewVC: UIViewController {
     // MARK: - Properties
     private var previewService: PreviewService!
     private var timerService: TimerService!
+    private var recognizer: Recognizer!
     // MARK: - Lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -36,6 +37,7 @@ final class CameraPreviewVC: UIViewController {
         timerService = DependencyInjection.shared.timerService()
         timerService.delegate = self
         previewService.delegate = self
+        recognizer = DependencyInjection.shared.recognizer()
     }
     
 }
@@ -47,7 +49,10 @@ extension CameraPreviewVC: PreviewServiceDelegate {
     }
     
     func didProceedWithImage(_ data: Data) {
-        
+        guard let ciImage = CIImage(data: data) else { return }
+        recognizer.proceed(ciImage) { [unowned self] (results) in
+            // Proceed results
+        }
     }
     
 }
@@ -55,7 +60,7 @@ extension CameraPreviewVC: PreviewServiceDelegate {
 extension CameraPreviewVC: TimerServiceDelegate {
     
     func didPassTimeInterval() {
-        print("spent")
+        previewService.capturePhoto()
     }
     
 }
