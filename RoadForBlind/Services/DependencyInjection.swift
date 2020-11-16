@@ -16,4 +16,8 @@ final class DependencyInjection {
         return CameraPreviewService(bounds: bounds)
     }
     
+    func timerService() -> TimerService {
+        return R4BTimerService()
+    }
+    
 }
