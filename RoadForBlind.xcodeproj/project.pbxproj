@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3716920F25626FBD00EB79C4 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716920E25626FBD00EB79C4 /* CameraPreviewView.swift */; };
 		37169212256270E500EB79C4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37169211256270E500EB79C4 /* Color.swift */; };
+		37169215256271EF00EB79C4 /* CameraPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37169214256271EF00EB79C4 /* CameraPreviewVC.swift */; };
+		371692192562745A00EB79C4 /* CameraPreviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371692182562745A00EB79C4 /* CameraPreviewService.swift */; };
+		3716921C25627FE200EB79C4 /* PreviewServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716921B25627FE200EB79C4 /* PreviewServiceDelegate.swift */; };
+		3716921F2562827700EB79C4 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716921E2562827700EB79C4 /* DependencyInjection.swift */; };
 		3717163C2562670700BC59C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717163B2562670700BC59C8 /* AppDelegate.swift */; };
 		3717163E2562670700BC59C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717163D2562670700BC59C8 /* SceneDelegate.swift */; };
 		371716432562670700BC59C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371716412562670700BC59C8 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		3716920E25626FBD00EB79C4 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		37169211256270E500EB79C4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		37169214256271EF00EB79C4 /* CameraPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewVC.swift; sourceTree = "<group>"; };
+		371692182562745A00EB79C4 /* CameraPreviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewService.swift; sourceTree = "<group>"; };
+		3716921B25627FE200EB79C4 /* PreviewServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewServiceDelegate.swift; sourceTree = "<group>"; };
+		3716921E2562827700EB79C4 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		371716382562670700BC59C8 /* RoadForBlind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadForBlind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3717163B2562670700BC59C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3717163D2562670700BC59C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		371692172562744700EB79C4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				371692182562745A00EB79C4 /* CameraPreviewService.swift */,
+				3716921B25627FE200EB79C4 /* PreviewServiceDelegate.swift */,
+				3716921E2562827700EB79C4 /* DependencyInjection.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3717162F2562670700BC59C8 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +82,7 @@
 				3717165325626C0300BC59C8 /* View */,
 				3717165625626C0D00BC59C8 /* Storyboards */,
 				3717165725626C1A00BC59C8 /* Resources */,
+				371692172562744700EB79C4 /* Services */,
 				371716492562670A00BC59C8 /* Info.plist */,
 			);
 			path = RoadForBlind;
@@ -88,6 +107,7 @@
 		3717165225626BFC00BC59C8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				37169214256271EF00EB79C4 /* CameraPreviewVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +212,10 @@
 				37169212256270E500EB79C4 /* Color.swift in Sources */,
 				3717163E2562670700BC59C8 /* SceneDelegate.swift in Sources */,
 				3716920F25626FBD00EB79C4 /* CameraPreviewView.swift in Sources */,
+				37169215256271EF00EB79C4 /* CameraPreviewVC.swift in Sources */,
+				3716921C25627FE200EB79C4 /* PreviewServiceDelegate.swift in Sources */,
+				3716921F2562827700EB79C4 /* DependencyInjection.swift in Sources */,
+				371692192562745A00EB79C4 /* CameraPreviewService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
