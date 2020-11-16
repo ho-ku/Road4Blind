@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3716920F25626FBD00EB79C4 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716920E25626FBD00EB79C4 /* CameraPreviewView.swift */; };
+		37169212256270E500EB79C4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37169211256270E500EB79C4 /* Color.swift */; };
 		3717163C2562670700BC59C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717163B2562670700BC59C8 /* AppDelegate.swift */; };
 		3717163E2562670700BC59C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717163D2562670700BC59C8 /* SceneDelegate.swift */; };
 		371716432562670700BC59C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371716412562670700BC59C8 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3716920E25626FBD00EB79C4 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		37169211256270E500EB79C4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		371716382562670700BC59C8 /* RoadForBlind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadForBlind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3717163B2562670700BC59C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3717163D2562670700BC59C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		3717165325626C0300BC59C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3716920E25626FBD00EB79C4 /* CameraPreviewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				371716442562670A00BC59C8 /* Assets.xcassets */,
+				37169211256270E500EB79C4 /* Color.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -183,7 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3717163C2562670700BC59C8 /* AppDelegate.swift in Sources */,
+				37169212256270E500EB79C4 /* Color.swift in Sources */,
 				3717163E2562670700BC59C8 /* SceneDelegate.swift in Sources */,
+				3716920F25626FBD00EB79C4 /* CameraPreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
