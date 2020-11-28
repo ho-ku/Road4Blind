@@ -22,7 +22,7 @@ final class InceptionRecognizer: Recognizer {
                 completionHandler([])
                 return
             }
-            completionHandler(results.prefix(10).map { $0.identifier })
+            completionHandler(results.map { $0.identifier })
         }
         let handler = VNImageRequestHandler(ciImage: image)
         do {

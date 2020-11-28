@@ -51,7 +51,12 @@ extension CameraPreviewVC: PreviewServiceDelegate {
     func didProceedWithImage(_ data: Data) {
         guard let ciImage = CIImage(data: data) else { return }
         recognizer.proceed(ciImage) { [unowned self] (results) in
-            // Proceed results
+            let mainResults = results.prefix(7).reduce(" ", +)
+            if mainResults.contains("traffic light") && !mainResults.contains(" car,") {
+                AlertService.presentSimpleOKAlert(self, title: "Detect", message: "traffic light")
+            } else if mainResults.contains(" car,") || mainResults.contains(" bike,") {
+                AlertService.presentSimpleOKAlert(self, title: "Detect", message: "car")
+            }
         }
     }
     

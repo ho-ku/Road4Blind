@@ -10,4 +10,5 @@ import Foundation
 struct C {
     static let usualTimerInterval: Double = 4.0
     static let roadTimerInterval: Double = 2.0
+    static let okTitle: String = "OK"
 }
