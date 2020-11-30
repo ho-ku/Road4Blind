@@ -16,6 +16,7 @@ final class CameraPreviewVC: UIViewController {
     private var previewService: PreviewService!
     private var timerService: TimerService!
     private var recognizer: Recognizer!
+    private var resultProcessor: ResultProcessor!
     // MARK: - Lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -38,6 +39,7 @@ final class CameraPreviewVC: UIViewController {
         timerService.delegate = self
         previewService.delegate = self
         recognizer = DependencyInjection.shared.recognizer()
+        resultProcessor = DependencyInjection.shared.resultProcessor()
     }
     
 }
@@ -52,10 +54,25 @@ extension CameraPreviewVC: PreviewServiceDelegate {
         guard let ciImage = CIImage(data: data) else { return }
         recognizer.proceed(ciImage) { [unowned self] (results) in
             let mainResults = results.prefix(7).reduce(" ", +)
+            var resultState: SignState = .none
+            var attentionString: String?
             if mainResults.contains("traffic light") && !mainResults.contains(" car,") {
-                AlertService.presentSimpleOKAlert(self, title: "Detect", message: "traffic light")
+                resultState = .attention
+                attentionString = "traffic light"
             } else if mainResults.contains(" car,") || mainResults.contains(" bike,") {
-                AlertService.presentSimpleOKAlert(self, title: "Detect", message: "car")
+                resultState = .attention
+                attentionString = "car"
+            } else {
+                resultState = .none
+            }
+            resultProcessor.proceed(with: resultState) { [unowned self] (newState) in
+                self.mainView.updateState(newState)
+                self.timerService.timerState = newState == .attention ? .road : .usual
+                if let str = attentionString {
+                    DispatchQueue.main.async { [unowned self] in
+                        AlertService.presentSimpleOKAlert(self, title: "Detect", message: str)
+                    }
+                }
             }
         }
     }

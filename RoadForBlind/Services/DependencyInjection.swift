@@ -24,4 +24,8 @@ final class DependencyInjection {
         return InceptionRecognizer()
     }
     
+    func resultProcessor() -> ResultProcessor {
+        return R4BResultProcessor()
+    }
+    
 }

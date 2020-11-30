@@ -26,6 +26,8 @@
 		371716482562670A00BC59C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371716462562670A00BC59C8 /* LaunchScreen.storyboard */; };
 		373CCFF8257035C800F98343 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373CCFF7257035C800F98343 /* AlertService.swift */; };
 		373CCFFB2570379500F98343 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 373CCFFA2570379400F98343 /* MobileNetV2.mlmodel */; };
+		37D9A14B2574F28B0050FAC5 /* ResultProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9A14A2574F28B0050FAC5 /* ResultProcessor.swift */; };
+		37D9A14F2574F3000050FAC5 /* R4BResultProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9A14E2574F3000050FAC5 /* R4BResultProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		371716492562670A00BC59C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373CCFF7257035C800F98343 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		373CCFFA2570379400F98343 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		37D9A14A2574F28B0050FAC5 /* ResultProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProcessor.swift; sourceTree = "<group>"; };
+		37D9A14E2574F3000050FAC5 /* R4BResultProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R4BResultProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		371692172562744700EB79C4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				37D9A1492574F2750050FAC5 /* ResultProcessor */,
 				3716923B2562C6FD00EB79C4 /* ImageProcessor */,
 				371692222562854E00EB79C4 /* Timer */,
 				371692212562854100EB79C4 /* CameraPreview */,
@@ -194,6 +199,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		37D9A1492574F2750050FAC5 /* ResultProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				37D9A14A2574F28B0050FAC5 /* ResultProcessor.swift */,
+				37D9A14E2574F3000050FAC5 /* R4BResultProcessor.swift */,
+			);
+			path = ResultProcessor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D9A14F2574F3000050FAC5 /* R4BResultProcessor.swift in Sources */,
 				3717163C2562670700BC59C8 /* AppDelegate.swift in Sources */,
 				3716922F256292CB00EB79C4 /* Inceptionv3.mlmodel in Sources */,
 				373CCFFB2570379500F98343 /* MobileNetV2.mlmodel in Sources */,
@@ -275,6 +290,7 @@
 				371692242562855800EB79C4 /* TimerService.swift in Sources */,
 				3716920F25626FBD00EB79C4 /* CameraPreviewView.swift in Sources */,
 				37169215256271EF00EB79C4 /* CameraPreviewVC.swift in Sources */,
+				37D9A14B2574F28B0050FAC5 /* ResultProcessor.swift in Sources */,
 				371692392562C6DE00EB79C4 /* Recognizer.swift in Sources */,
 				3716921C25627FE200EB79C4 /* PreviewServiceDelegate.swift in Sources */,
 				3716921F2562827700EB79C4 /* DependencyInjection.swift in Sources */,
